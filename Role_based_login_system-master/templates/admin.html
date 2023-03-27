@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <title>admin page</title> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>admin</title>
+    
+  
+</head>
+<body>
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- <div class="col-md-6 order-md-2">
+          <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+        </div> -->
+        <div class="col-md-12 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="form-block">
+                  <div class="mb-4">
+                    <center><h1>Admin view</h1></center>
+                </div>
+
+    {% block content %}
+    <!-- <h1> Admin Instruction</h1> -->
+  
+
+    
+
+<table border="2px" style="width:100%;text-align: center;" class="table table-responsible">
+  <tr><th>   State   </th> <th>   Document   </th> <th>   Client   </th> <th>   Information   </td><td>   Edit   </td><td>   Delete   </td></tr>
+    {% for x in allInstruction %}
+      <tr><td>{{ x.state }}</td> <td>{{ x.document }}</td><td>{{ x.client }}</td><td>{{ x.information }}</td><td><a href="/edit/{{x.id}}">update</a></td><td><a href="/delete/{{x.id}}">delete</a></td></tr>
+    {% endfor %}
+  </table>
+  <!-- <button><a style="color:rgb(19, 18, 18);" href="/add">AddNew instruction</a></button>
+  <button><a style="color:rgb(19, 18, 18);" href="/">logout</a></button> -->
+  <button type="button" class="btn btn-sm btn-warning text-white"><a href="/add">Add New Instruction</a></button>
+  <button type="button" class="btn btn-sm btn-warning text-white"><a href="/">Logout</a></button>
+  <!-- <p><a href="/">Logout</a></p> -->
+  {% endblock %}
+</div>
+<!-- <button class="btn btn-pill text-white btn-block btn-primary"></button> -->
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>update</title>
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="container">
+          <div class="row justify-content-center">
+            <!-- <div class="col-md-6 order-md-2">
+              <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+            </div> -->
+            <div class="col-md-6 contents">
+              <div class="row justify-content-center">
+                <div class="col-md-12">
+                  <div class="form-block">
+                      <div class="mb-4">
+                          <h3>Update Instruction</h3>
+                    </div>
+    <form method="POST" action="/update/{{editinstruction.id}}/" >
+        {% csrf_token %}
+        <div>
+            <br>
+            <!-- <p>
+                <h3>Update </h3>
+            </p> -->
+        </div>
+        <!-- <label for="">Role :</label>
+        <select name="role" id="role">
+            <option value="">Select Option :</option>
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+        </select> -->
+        <div>
+            
+            <div><p>State:</p>
+            
+                <select name="state" id="role">
+                    <option value="">{{editinstruction.state}}</option>
+                    <option value="All States">All States</option>
+                    <option value="AL">AL</option>
+                    <option value="AK">AK</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="DC">DC</option>
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="{{editinstruction.state}}" selected>{{editinstruction.state}}</option>
+                    
+                </select>
+            </div>
+        </div>
+        <div>
+           
+            <div> <p>Document:</p>
+                
+                <select name="document" id="role">
+                    <option value="">{{editinstruction.document}}</option>
+                    <option value="All Documents">All Documents</option>
+                    <option value="QCD">QCD</option>
+                    <option value="SWD">SWD</option>
+                    <option value="GWD">GWD</option>
+                    <option value="DIL">DIL</option>
+                    <option value="{{editinstruction.document}}" selected>{{editinstruction.document}}</option>
+                    
+                
+                    
+                </select>
+                
+
+            </div>
+        </div>
+        <div>
+            
+            <div>
+                <p>Client:</p>
+
+                <select name="client" id="role">
+                    <option value="">{{editinstruction.client}}</option>
+                    <option value="All Clients">All Clients</option>
+                    <option value="TF">TF</option>
+                    <option value="WFG">WFG</option>
+                    <option value="SLINK">SLINK</option>
+                    <option value="AMR">AMR</option>
+                    <option value="{{editinstruction.client}}" selected>{{editinstruction.client}}</option>
+                    
+                
+                    
+                </select>
+            </div>
+        </div>
+        <div>
+            <p>Information:</p>
+            <!-- <div>
+                <input type="text" name="information" value="{{editinstruction.information}}" />
+            </div> -->
+            <div>
+                <textarea name="information"  rows="3" cols="40">{{ editinstruction.information }}</textarea>
+            </div>
+        </div>
+        <div>
+            <br>
+            <!-- <a href="/update/{{editinstruction.id}}">update</a> -->
+            <!-- <button type="submit">Update</button> -->
+            <input type="submit" value="Update" class="btn btn-pill text-white btn-block btn-warning">
+        </div>
+    </form>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
